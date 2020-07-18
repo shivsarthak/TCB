@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "966014374923",
+    "firebase_url": "https://thecollegebee-events-app.firebaseio.com",
+    "project_id": "thecollegebee-events-app",
+    "storage_bucket": "thecollegebee-events-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:966014374923:android:237e2e35fe60d65d25230e",
+        "android_client_info": {
+          "package_name": "com.thecollegebee.androidapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "966014374923-fclqpoh6c6q25ptl0o06d709bqhest36.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.thecollegebee.androidapp",
+            "certificate_hash": "ac534656abbef36a7566664bbfd8efdcd71defab"
+          }
+        },
+        {
+          "client_id": "966014374923-7t9kvvlajtur7l2ovdd7jrm1mnbh3dvn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCLR0nwoy_h0FDRtu0LqEthurhE_zwR1QY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "966014374923-7t9kvvlajtur7l2ovdd7jrm1mnbh3dvn.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "966014374923-6ibh86agi2ge1au9bpap8kmrdpm282qs.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.thecollegebee.ios.app"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
