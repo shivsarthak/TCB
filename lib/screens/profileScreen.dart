@@ -18,6 +18,7 @@ class ProfileScreen extends StatefulWidget {
 
 class _ProfileScreenState extends State<ProfileScreen> {
   List<DropdownMenuItem<String>> items = [];
+  final _formKey = GlobalKey<FormState>();
   void getcolleges() async {
     DatabaseService().getCollegeData().then((collegeData) {
       setState(() {
@@ -41,7 +42,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final _formKey = GlobalKey<FormState>();
+    print("Building");
+
     String firstName, lastName, college, rollNo;
     bool _autovalidate = false;
     if (widget.firstTimeSetup) {
@@ -228,36 +230,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
                             onChanged: (value) {
                               college = value;
                             }),
-                      ),
-                      SizedBox(height: 12),
-                      TextFormField(
-                        initialValue:
-                            widget.firstTimeSetup ? null : widget.user.rollNo,
-                        decoration: InputDecoration(
-                          filled: true,
-                          fillColor: Colors.white60,
-                          border: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(5),
-                              borderSide: BorderSide(
-                                  color: Color(0xffFFC800), width: 3)),
-                          labelText: 'Roll Number',
-                          prefixIcon: const Icon(
-                            Icons.confirmation_number,
-                            color: Colors.black,
-                          ),
-                        ),
-                        validator: (value) {
-                          if (value == null) {
-                            return "Roll number cant be empty";
-                          }
-                          if (value.length < 5)
-                            return 'Roll Number cant be less than 5 characters long';
-                          else
-                            return null;
-                        },
-                        onSaved: (value) {
-                          rollNo = value;
-                        },
                       ),
                       SizedBox(height: 12),
                       Center(
