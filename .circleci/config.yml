@@ -1,14 +1,22 @@
 version: 2
 jobs:
-  build:
+  build:    
     docker:
-      - image: cirrusci/flutter
+      - image: cirrusci/flutter:v1.5.8 
+
+    branches:
+      only: master
+
     steps:
       - checkout
+
       - run:
-          name: Get properties
-          command: |
-                  wget $GOOGLESERVICESJSON -P android/app
-      - run: flutter channel stable
-      - run: flutter doctor
-      - run: flutter -v build apk 
+          name: Run Flutter doctor
+          command: flutter doctor
+
+      - run:
+          name: Build the Android version
+          command: flutter build apk 
+
+      - store_artifacts:
+          path: build/app/outputs/apk/release/app-release.apk
